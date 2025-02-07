@@ -6,10 +6,10 @@ export default function IntroTrackPage() {
     <div className="track-page">
       <h1>Intro</h1>
       <p>
-        This is the opening track of the album.
+        This is the outro.
       </p>
       <img
-        src="/tracks/intro.png"
+        src="/tracks/intro.jpg"
         alt="Track 1: Intro"
         className="track-image"
       />
