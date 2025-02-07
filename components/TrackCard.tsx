@@ -1,5 +1,7 @@
 // components/TrackCard.tsx
 import Link from "next/link";
+import styles from '../styles/TrackCard.module.css'; // Import CSS Module
+
 
 interface TrackCardProps {
   src: string;
@@ -9,9 +11,9 @@ interface TrackCardProps {
 
 const TrackCard: React.FC<TrackCardProps> = ({ src, link, title }) => {
   return (
-    <div className="track-card">
+    <div >
       <Link href={link}>
-        <h2>{title}</h2>
+        <h2 className={styles.track}>{title}</h2>
         <img src={`/tracks/${src}`} alt={title} className="track-image" />
       </Link>
     </div>

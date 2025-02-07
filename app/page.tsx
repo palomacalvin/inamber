@@ -5,6 +5,16 @@ const tracks = [
   { src: 'intro.jpg', link: '/intro', title: 'Intro', },
   { src: 'in-amber.jpg', link: '/in-amber', title: 'In Amber', },
   { src: 'circadia.jpg', link: '/circadia', title: 'Circadia', },
+  { src: 'circadia.jpg', link: '/circadia', title: 'Circadia', },
+  { src: 'circadia.jpg', link: '/circadia', title: 'Circadia', },
+  { src: 'circadia.jpg', link: '/circadia', title: 'Circadia', },
+  { src: 'circadia.jpg', link: '/circadia', title: 'Circadia', },
+  { src: 'circadia.jpg', link: '/circadia', title: 'Circadia', },
+  { src: 'circadia.jpg', link: '/circadia', title: 'Circadia', },
+  { src: 'circadia.jpg', link: '/circadia', title: 'Circadia', },
+  { src: 'circadia.jpg', link: '/circadia', title: 'Circadia', },
+  { src: 'circadia.jpg', link: '/circadia', title: 'Circadia', },
+
   // Add more tracks as needed
 ];
 
