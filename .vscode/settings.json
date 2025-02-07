@@ -1,0 +1,14 @@
+{
+  // Makes certain files not show up in VSCode. Uses Regex
+  // https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference
+
+  "files.exclude": {
+    ".next": true,
+    ".gitignore": true,
+    "*.ts": true,
+    "*.mjs": true,
+    "package*": true,
+    "tsconfig.json": true,
+    "node_modules": true
+  }
+}
