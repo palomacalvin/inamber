@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css"
 
 const tracks = [
   { src: 'intro.png', link: '/intro', title: 'Intro', },
-  { src: 'in-amber.jpg', link: '/in-amber', title: 'In Amber', },
+  { src: 'in-amber.png', link: '/in-amber', title: 'In Amber', },
   { src: 'circadia.jpg', link: '/circadia', title: 'Circadia', },
   { src: 'circadia.jpg', link: '/circadia', title: 'Circadia', },
   { src: 'circadia.jpg', link: '/circadia', title: 'Circadia', },

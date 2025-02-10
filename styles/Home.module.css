@@ -1,6 +1,7 @@
 .home_header {
     background-color: transparent;
     font-family: "Letter-Set-A";
+    justify-content: center;
 }
 
 .home_background {
