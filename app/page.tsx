@@ -1,5 +1,8 @@
 // app/page.tsx
 import TrackCard from '../components/TrackCard';
+import Link from "next/link";
+import styles from "../styles/Home.module.css"
+
 
 const tracks = [
   { src: 'intro.png', link: '/intro', title: 'Intro', },
@@ -20,7 +23,12 @@ const tracks = [
 
 export default function Home() {
   return (
-    <div className="home-container">
+    <div className={styles.home_background}>
+      <Link href="/">
+          <header className={styles.home_header}>
+            <h1>In Amber</h1>
+          </header>
+        </Link>
       {tracks.map((track, index) => (
         <TrackCard
           key={index}

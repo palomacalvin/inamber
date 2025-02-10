@@ -1,5 +1,5 @@
-.track {
-    background-color: rgb(255, 207, 15);
+.track_background {
+    background-color: transparent;
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: Letter-Set-B;
@@ -9,4 +9,8 @@
     display: flex;
     justify-content: center;
     align-content: center;
+}
+
+.track {
+
 }

@@ -1,0 +1,8 @@
+.home_header {
+    background-color: transparent;
+    font-family: "Letter-Set-A";
+}
+
+.home_background {
+    background-image: linear-gradient(red, yellow);
+}
