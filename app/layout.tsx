@@ -10,6 +10,8 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={styles.layout}>
+        <Link href="/">
+        </Link>
         <main>{children}</main>
         <footer>
           <p>In Amber - &copy; 2025</p>

@@ -1,7 +1,12 @@
 .home_header {
     background-color: transparent;
     font-family: "Letter-Set-A";
+    font-size: 80px;
+    text-align: center;
+    display: flex; 
     justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
 .home_background {
