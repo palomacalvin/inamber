@@ -9,7 +9,7 @@ export default function IntroTrackPage() {
         This is the opening track of the album.
       </p>
       <img
-        src="/tracks/intro.jpg"
+        src="/tracks/intro.png"
         alt="Track 1: Intro"
         className="track-image"
       />

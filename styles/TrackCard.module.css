@@ -1,3 +1,24 @@
-.track {
-    background-color: rgb(194, 130, 255);
+.track_background {
+    background-color: transparent;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: Letter-Set-B !important;
+    font-size: 28;
+    color: rgb(34, 23, 7);
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transition: color 0.3s ease, background-color 0.8s ease; /* Add a smooth transition */
+}
+
+.track_background:hover {
+    color: rgb(255, 255, 255); /* Change text color to white (or your desired hover color) */
+    background-color: rgb(30, 84, 89); /* Set a background color for the hover state */
+}
+
+.track_image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }

@@ -1,9 +1,14 @@
 .header {
     padding-bottom: 20px;
-    background-color: rgb(43, 43, 43);
+    background-color: rgb(255, 207, 15);
+    font-family: Letter-Set-C;
+    font-size: 90;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: rgb(34, 23, 7)
 }
 
 .layout {
-    font-family: Letter-Set-C;
-    font-size: 90;
 }
