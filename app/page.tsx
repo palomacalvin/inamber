@@ -12,10 +12,10 @@ const tracks = [
   { src: 'aogmc.png', link: '/aogmc', title: 'Attack of Giant Mutant Cicada', },
   { src: 'glimmerance.png', link: '/glimmerance', title: 'Glimmerance', },
   { src: 'spectra-approxima.png', link: '/spectra-approxima', title: 'Spectra Approxima', },
-  // { src: 'circadia.jpg', link: '/gossamer', title: 'Gossamer', },
-  // { src: 'circadia.jpg', link: '/shutter-speed', title: 'Shutter Speed', },
+  { src: 'gossamer.png', link: '/gossamer', title: 'Gossamer', },
+  { src: 'shutter-speed.png', link: '/shutter-speed', title: 'Shutter Speed', },
   // { src: 'circadia.jpg', link: '/omyx-speciosus', title: 'Omyx speciosus', },
-  // { src: 'circadia.jpg', link: '/undeniable-truths', title: 'Undeniable Truths', },
+  // { src: 'circadia.jpg', link: '/undeniable-tr uths', title: 'Undeniable Truths', },
   // { src: 'circadia.jpg', link: '/outro', title: 'Outro', },
   // { src: 'circadia.jpg', link: '/next', title: 'Next', },
 

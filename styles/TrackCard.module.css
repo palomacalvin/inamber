@@ -17,8 +17,28 @@
     background-color: rgb(30, 84, 89); /* Set a background color for the hover state */
 }
 
+
+@keyframes pulse {
+    0% {
+        transform: scale(1) rotate(0deg); /* Initial size and rotation */
+    }
+    50% {
+        transform: scale(1.5) rotate(2deg); /* Slightly enlarged and rotated */
+    }
+    100% {
+        transform: scale(1) rotate(0deg); /* Return to original size and rotation */
+    }
+}
+
+/* Apply pulse effect on image hover */
 .track_image {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth transition for transformation */
+}
+
+.track_image:hover {
+    animation: pulse 5s ease-in-out 1; /* Run the animation once */
+    animation-fill-mode: forwards; /* Keep the effect at the end of the animation */
 }
