@@ -14,11 +14,10 @@ const tracks = [
   { src: 'spectra-approxima.png', link: '/spectra-approxima', title: 'Spectra Approxima', },
   { src: 'gossamer.png', link: '/gossamer', title: 'Gossamer', },
   { src: 'shutter-speed.png', link: '/shutter-speed', title: 'Shutter Speed', },
-  // { src: 'circadia.jpg', link: '/omyx-speciosus', title: 'Omyx speciosus', },
-  // { src: 'circadia.jpg', link: '/undeniable-tr uths', title: 'Undeniable Truths', },
-  // { src: 'circadia.jpg', link: '/outro', title: 'Outro', },
-  // { src: 'circadia.jpg', link: '/next', title: 'Next', },
-
+  { src: 'omyx-speciosus.png', link: '/omyx-speciosus', title: 'Omyx speciosus', },
+  { src: 'undeniable-truths.png', link: '/undeniable-truths', title: 'Undeniable Truths', },
+  { src: 'inamber-outro.png', link: '/outro', title: 'Outro', },
+  { src: 'inamber-theory.png', link: '/next', title: 'Next', },
   // Add more tracks as needed
 ];
 
