@@ -10,11 +10,13 @@
     justify-content: center;
     align-content: center;
     transition: color 0.3s ease, background-color 0.8s ease; /* Add a smooth transition */
+    cursor: url('/assets/ladybug.cur') 12 12, auto;
 }
 
 .track_background:hover {
     color: rgb(255, 255, 255); /* Change text color to white (or your desired hover color) */
     background-color: rgb(30, 84, 89); /* Set a background color for the hover state */
+    cursor: url('/assets/ladybug.cur') 12 12, auto;
 }
 
 
@@ -36,9 +38,11 @@
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease; /* Smooth transition for transformation */
+    cursor: url('/assets/ladybug.cur') 12 12, auto;
 }
 
 .track_image:hover {
     animation: pulse 5s ease-in-out 1; /* Run the animation once */
     animation-fill-mode: forwards; /* Keep the effect at the end of the animation */
+    cursor: url('/assets/ladybug.cur') 12 12, auto;
 }
