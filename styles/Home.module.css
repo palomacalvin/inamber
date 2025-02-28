@@ -7,8 +7,10 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
+    cursor: url('/assets/ladybug.cur') 12 12, auto;
 }
 
 .home_background {
     background-image: linear-gradient(red, yellow);
+    cursor: url('/assets/ladybug.cur') 12 12, auto;
 }

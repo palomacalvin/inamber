@@ -42,3 +42,7 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
+.custom_cursor {
+  cursor: url('/assets/target-scope.svg') 12 12, auto;
+}
