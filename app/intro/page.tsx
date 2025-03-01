@@ -10,7 +10,7 @@ export default function IntroTrackPage() {
       </p>
       <img
         src="/tracks/intro.png"
-        alt="Track 1: Intro"
+        alt="Intro"
         className="track-image"
       />
     </div>

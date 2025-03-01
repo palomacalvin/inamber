@@ -1,0 +1,21 @@
+.basicpage_header {
+    background-color: transparent;
+    font-family: "Letter-Set-A";
+    font-size: 80px;
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    cursor: url('/assets/ladybug.cur') 12 12, auto;
+}
+
+.basicpage_background {
+    background-image: linear-gradient(red, yellow);
+    cursor: url('/assets/ladybug.cur') 12 12, auto;
+
+    text-align: center;
+    font-size: 2rem;  /* Adjust to your desired text size */
+    line-height: 2; /* Optional: Add some space between lines */
+
+}
