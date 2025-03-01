@@ -10,6 +10,11 @@
     color: rgb(34, 23, 7)
 }
 
+@media (max-width: 768px) {
+    .header {
+      color: rgb(34, 23, 7); /* Make sure color remains black on mobile */
+    }
+  }
 
 .layout {
 }
