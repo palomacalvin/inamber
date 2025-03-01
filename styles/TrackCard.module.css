@@ -8,10 +8,26 @@
     flex-direction: row;
     display: flex;
     justify-content: center;
+    align-items: center; /* Add align-items to vertically center the text */
+    text-align: center; /* Ensure text is centered horizontally */
     align-content: center;
     transition: color 0.3s ease, background-color 0.8s ease; /* Add a smooth transition */
     cursor: url('/assets/ladybug.cur') 12 12, auto;
 }
+
+@media (max-width: 768px) {
+    .track_background {
+      font-size: 24px; /* Adjust font size for mobile */
+    }
+  }
+
+
+/* Larger screens */
+@media (min-width: 1024px) {
+    .track_background {
+      font-size: 28px; /* Larger size for desktop */
+    }
+  }
 
 .track_background:hover {
     color: rgb(255, 255, 255); /* Change text color to white (or your desired hover color) */
