@@ -25,7 +25,7 @@
 /* Larger screens */
 @media (min-width: 1024px) {
     .track_background {
-      font-size: 28px; /* Larger size for desktop */
+      font-size: 32px; /* Larger size for desktop */
     }
   }
 
