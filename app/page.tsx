@@ -18,6 +18,7 @@ const tracks = [
   { src: 'undeniable-truths.png', link: '/undeniable-truths', title: 'Undeniable Truths', },
   { src: 'inamber-outro-v002.png', link: '/outro', title: 'Outro', },
   { src: 'inamber-theory.png', link: '/next', title: 'Next', },
+  { src: 'inamber-theory.png', link: '/collections', title: 'Collections', }
   // Add more tracks as needed
 ];
 
