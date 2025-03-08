@@ -19,5 +19,4 @@ const TrackCard: React.FC<TrackCardProps> = ({ src, link, title }) => {
   );
 };
 
-
 export default TrackCard;
