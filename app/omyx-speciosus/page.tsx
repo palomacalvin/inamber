@@ -4,8 +4,8 @@ import styles from '../../styles/Basic_page.module.css'; // Import CSS Module
 
 const text = `Speciate, but we’re cut from the same cloth
       The mammal’s tender flesh, the scale of the moth
-      Whisper through fur and sun into skin
-      Salt in the sea and calcareous bodies within
+      Whispers through fur and sun into skin
+      Salt in the sea and calcareous casts within
       All of our symmetry and cracks, built from the same blocks,
       The mammal’s tender flesh, the scale of the moth
 
@@ -29,6 +29,13 @@ export default function IntroTrackPage() {
             {line}
           </span>
         ))}
+      <iframe
+        src="/cables/omyx_speciosus/index.html" // Path to the HTML file inside public folder
+        width="100%"
+        height="600px"
+        style={{ border: "none" }}
+        title="Omyx speciosus HTML"
+      />
     </div>
   );
 }
