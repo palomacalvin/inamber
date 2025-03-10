@@ -81,8 +81,17 @@
     cursor: url('/assets/ladybug.cur') 12 12, auto;
 }
 
+/* When hovered, the corresponding rotation animation is applied */
 .track_image:hover {
     animation: pulse 5s ease-in-out 1; /* Run the animation once */
     animation-fill-mode: forwards; /* Keep the effect at the end of the animation */
     cursor: url('/assets/ladybug.cur') 12 12, auto;
+}
+
+.track_image.clockwise:hover {
+    animation: pulse_right 5s ease-in-out 1; /* Rotate clockwise */
+}
+
+.track_image.counterclockwise:hover {
+    animation: pulse_left 5s ease-in-out 1; /* Rotate counterclockwise */
 }

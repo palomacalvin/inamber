@@ -33,6 +33,7 @@ export default function Home() {
       {tracks.map((track, index) => (
         <TrackCard
           key={index}
+          index={index}
           src={track.src}
           link={track.link}
           title={track.title}
