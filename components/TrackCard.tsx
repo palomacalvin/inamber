@@ -1,7 +1,6 @@
 // components/TrackCard.tsx
 "use client"; // Mark this file as a client-side component
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from '../styles/TrackCard.module.css'; // Import your CSS Module
 
@@ -18,7 +17,7 @@ const TrackCard: React.FC<TrackCardProps> = ({ src, link, title, index }) => {
   return (
     <div className={styles.trackCardContainer}>
       <Link href={link}>
-        <h2 className={styles.track_background}>{title}</h2>
+        <h2 className={styles.track_background}>{title}</h2>d
         <img
           src={`/tracks/${src}`}
           alt={title}

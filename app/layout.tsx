@@ -2,7 +2,6 @@
 "use client"; // Mark this as a client-side component
 
 import { ReactNode, useState, useEffect } from "react";
-import Link from "next/link";
 import "./globals.css"; // Global styles
 import styles from '../styles/Layout.module.css'; // Import CSS Module
 import LoadingScreen from "../components/LoadingScreen"; // Import the LoadingScreen component
