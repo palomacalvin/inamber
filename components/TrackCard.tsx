@@ -17,7 +17,7 @@ const TrackCard: React.FC<TrackCardProps> = ({ src, link, title, index }) => {
   return (
     <div className={styles.trackCardContainer}>
       <Link href={link}>
-        <h2 className={styles.track_background}>{title}</h2>d
+        <h2 className={styles.track_background}>{title}</h2>
         <img
           src={`/tracks/${src}`}
           alt={title}
