@@ -13,7 +13,7 @@ export default function IntroTrackPage() {
       <br></br>
 
       <div style={{ fontFamily: "blzee", color: "#fdfff6", fontSize: "3rem", width: "200px", marginLeft: "50px" }}>
-        There is a light i know.
+        {`There is a light i know.
         Somewhere there's a light, i know.
         And i know some lights,
         yeah they're friends of mine,
@@ -26,7 +26,7 @@ export default function IntroTrackPage() {
         And i know some lights,
         yeah they're friends of mine.
         And i have a little light in me,
-        And i have the time.
+        And i have the time.`}
       </div>
     </>
   );

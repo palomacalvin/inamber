@@ -9,15 +9,15 @@ export default function IntroTrackPage() {
       <div style={{ fontFamily: "berryrotunda" }}>AS WRITTEN IN THE AMBER 
         <br></br>
         <br></br>
-        As engraved in the Amber Decrees of the Cicadids,
+        {`As engraved in the Amber Decrees of the Cicadids,
         our ancestors, the ancient Cicadids, lived in peace and harmony.
         For centuries, our ancestors prospered, and our voices were heard across
         the lands. Life was abundant and glorious, and all the Cicadids lived
-        with great honor and prosperity.
+        with great honor and prosperity.`}
         <br></br>
-        Our peace was unstable, however, and as time progressed, a great beast
+        {`Our peace was unstable, however, and as time progressed, a great beast
         grew to plague Cicadidae. There was one — a giant — who wished to 
-        rule us all, in cruelty and fear. It was
+        rule us all, in cruelty and fear. It was`}
         <br></br>
         <br></br> 
 
@@ -25,9 +25,10 @@ export default function IntroTrackPage() {
 
         <br></br>
 
-        A creature determined to torment, Ayuthia grew to be 10 times as imposing as
+        {`A creature determined to torment, Ayuthia grew to be 10 times as imposing as
         the rest of the Cicadids. Its voice created a sound so strong that the Earth shook
-        for miles beneath Ayuthia. Any creature in its path would be eliminated.
+        for miles beneath Ayuthia. Any creature in its path would be eliminated.`}
+
         <br></br>
         <br></br>
 
@@ -37,17 +38,17 @@ export default function IntroTrackPage() {
         <br></br>
         <br></br>
 
-        Ayuthia chose to rise to power amongst the Cicadids, overthrowing the benevolent and just
+        {`Ayuthia chose to rise to power amongst the Cicadids, overthrowing the benevolent and just
         Council of Amber. And though Ayuthia's reign was long and full of terror, its downfall
-        was rejoiced across the land. 
+        was rejoiced across the land.`}
         
         <br></br>
         <br></br>
         
-        For 17 years, Ayuthia's voice shook the Earth. Young Cicadids lived and perished under
+        {`For 17 years, Ayuthia's voice shook the Earth. Young Cicadids lived and perished under
         the spell of Ayuthia's voice. Living longer than any other Cicadid, apathy grew amongst
         the youthful Cicadas, who grew used to life under Ayuthia's power. 13 years after Ayuthia's
-        reign began, three young Cicadids formed
+        reign began, three young Cicadids formed`}
 
         <br></br> 
         <br></br> 
@@ -56,7 +57,7 @@ export default function IntroTrackPage() {
 
         <br></br>
 
-        and vowed to stop Ayuthia. Over the agonizing course of four years, the Coalition 
+        {`and vowed to stop Ayuthia. Over the agonizing course of four years, the Coalition 
         grew, and each day the young Cicadids gathered their voices, in an effort to drown
         out Ayuthia's. And after four agonizing years, they did.
 
@@ -66,7 +67,7 @@ export default function IntroTrackPage() {
 
         With Ayuthia having perished, the Cicadids once again returned to peace. Cicadidae has
         lived through centuries of change, and through each new era, the Cicadids raise 
-        their voices every 17 years in remembrance of Ayuthia and the common peril.
+        their voices every 17 years in remembrance of Ayuthia and the common peril.`}
 
         {/* TODO: ADD VIDEO */}
 
