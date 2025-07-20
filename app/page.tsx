@@ -16,6 +16,7 @@ const tracks = [
   { src: 'shutter-speed.png', link: '/shutter-speed', title: 'Shutter Speed', },
   { src: 'omyx-speciosus.png', link: '/omyx-speciosus', title: 'Omyx speciosus', },
   { src: 'undeniable-truths.png', link: '/undeniable-truths', title: 'Undeniable Truths', },
+  { src: 'undeniable-truths.png', link: '/do-we-all-dream', title: 'Do We All Dream', },
   { src: 'inamber-outro-v002.png', link: '/outro', title: 'Outro', },
   { src: 'inamber-theory.png', link: '/next', title: 'Next', },
   { src: 'inamber-collections.png', link: '/collections', title: 'Collections', }

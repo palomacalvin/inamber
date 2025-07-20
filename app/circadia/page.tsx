@@ -9,13 +9,13 @@ const text = `Forward
       The pyramid's point is for the solitary few,
       the ones who climb,
       forgetting the laying of the bricks by many hands
-      and planting of seeds by many passages,
+      and planting of seeds by many spades,
       and the first breaths of the groundbreaker.
       What we build we build together,
       all of us live through all the weather.
       We were here long before you, in many forms,
       we know the rhythms, we know the scorn.
-      What we build, we build together --
+      What we build, we build together.
       All of us live through all the weather.
 
       `;
@@ -25,14 +25,19 @@ export default function IntroTrackPage() {
     <div className={styles.basicpage_background}>
       <div style={{ textAlign: "center"}}>
       </div>
+      <img src="/tracks/circadia-pg-001.png">
+      </img>
+
+      {/* TODO: ADD SHORT CAVALRY ANIMATION */}
+
         {text.split("\n").map((line, index) => (
           <span
             key={index}
             style={{
-              fontSize: index === 10 ? "4rem" : "2rem",  // Make Line 2 larger
+              fontSize: "6rem",  // Make Line 2 larger
               color: index === 9 ? "darkblue" : "black",   // Make Line 2 red
               display: "block",  // Each line on a new line
-              fontFamily: index === 9? "Letter-Set-A": "Letter-Set-B"
+              fontFamily: "blzee"
             }}
           >
             {line}

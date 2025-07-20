@@ -35,6 +35,11 @@ export default function IntroTrackPage() {
             {line}
           </span>
         ))}
+      <img
+        src="/tracks/intro_content_001.png"
+        alt="Intro Content 001"
+        className="track-image"
+      />
     </div>
   );
 }

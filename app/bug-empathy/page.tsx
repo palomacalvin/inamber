@@ -21,6 +21,19 @@ const text = `Am I unpleasant?
 
       `;
 
+const text2 = `I see how you treat the others,
+you're careful and playful and humble,
+you share food you share space,
+you fumble, you accept disgrace,
+and here i am, confined to be separate,
+made to be a villain, made to be desperate,
+i only sting what i don't understand,
+i only bite when i'm crushed in your hand.
+but you have to believe that you need me.
+i'm patient.
+
+`
+
 export default function IntroTrackPage() {
   return (
     <div className={styles.basicpage_background}>
@@ -30,15 +43,34 @@ export default function IntroTrackPage() {
           <span
             key={index}
             style={{
-              fontSize: index === 10 ? "4rem" : "2rem",  // Make Line 2 larger
-              color: index === 9 ? "darkblue" : "black",   // Make Line 2 red
+              fontSize: "4rem",
+              color: [6, 9].includes(index) ? "darkblue" : "black",
               display: "block",  // Each line on a new line
               fontFamily: index === 9? "Letter-Set-A": "Letter-Set-B"
             }}
           >
             {line}
           </span>
+
         ))}
+
+        {/* TODO: ADD VIDEO BETWEEN TEXT BLOCKS */}
+
+        {text2.split("\n").map((line, index) => (
+          <span
+            key={index}
+            style={{
+              fontSize: "4rem",
+              color: [6, 9].includes(index) ? "darkblue" : "black",
+              display: "block",  // Each line on a new line
+              fontFamily: index === 9? "Letter-Set-A": "Letter-Set-B"
+            }}
+          >
+            {line}
+          </span>
+
+        ))}
+
     </div>
   );
 }

@@ -1,40 +1,120 @@
 // app/tracks/intro/page.tsx
 "use client"; // Mark this as a client-side component if you use hooks like useParams
-import styles from '../../styles/Basic_page.module.css'; // Import CSS Module
+import photopage from '../../styles/photo_page.module.css';
 
-const text = `I love you and I’m made of you
-      And you are made of me
-      Why are you afraid of what you are?
-      Aren’t we all the same?
-      Really, mostly,
-      In function,
-      Component,
-      Figment,
-      And expiration.
-      The only difference is,
-      In Amber
-      I keep my skin.
+
+
+
+const text = `Transposed
+      In sediment
+      Embraced in blood of trees and flowers
+      The sweet arms of forever
+      Or, at least, a long time
+      How lovely is it to eclipse in a tomb of nectar
+      And somehow, you find me 
+      The collector
+      I'll sit on a shelf,
+      til I'm buried again
+      As we all are,
+      As is everything
+      The burial and bloom
+      From flight to amber and back again
+      `;
+
+
+const text2 = `What makes it last?
+      What makes us last?
+      Is it our skin, our soft parts?
+      Is it our shells and armor?
+      Is it the words we've spoken, 
+      The sounds we've sung,
+      The pages we wrote,
+      The photos we've hung,
+      Is it the paths and the buildings,
+      The nests and the burrows,
+      Is it the good and the great,
+      and the pain and the hate,
+      and everything in between?
+
+      Does it matter if my parts are
+      left behind when my cables get
+      unplugged and the signals no longer fire?
+      Will you remember me if my legs
+      and arms are swimming in
+      honeyed crystal longer than
+      honey remains to be tasted?
+
+      Will you remember me 
+      Will you remember me will you
+      Will you remember me 
+      Will you remember me will you
+      Will you remember me 
+      Will you remember me will you
+      Will you remember me 
+      Will you remember me will you
+      Will you remember me 
+      Will you remember me will you
+      Will you remember me 
+      Will you remember me will you
 
       `;
 
+
+
 export default function IntroTrackPage() {
   return (
-    <div className={styles.basicpage_background}>
+
+
+    <div className={photopage.photopage_repeat}>
       <div style={{ textAlign: "center"}}>
       </div>
+      <img src='tracks/in-amber-pg_001.png'>
+      </img>
         {text.split("\n").map((line, index) => (
           <span
             key={index}
             style={{
-              fontSize: index === 10 ? "4rem" : "2rem",  // Make Line 2 larger
-              color: index === 10 ? "darkblue" : "black",   // Make Line 2 red
+              fontSize: index === 10 ? "8rem" : "6rem",  // Make Line 2 larger
+              color: /*index === 10 ?*/ "darkblue" /*: "black"*/,   // Make Line 2 red
               display: "block",  // Each line on a new line
-              fontFamily: index === 10? "Letter-Set-A": "Letter-Set-B"
+              fontFamily: /*index === 10? "Letter-Set-A":*/ "tajamuka",
             }}
           >
             {line}
           </span>
         ))}
+
+
+        {"\n"}
+
+
+        <iframe
+          width="100%"
+          height="500"
+          src="https://www.youtube.com/embed/aTUVvAmH3gM&list=PL9DkwE2ufI7IsrBHHCKe37207-IUeos59"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+
+
+        {"\n"}
+
+          <span
+            style={{
+              fontSize: "8rem",
+              color: "darkblue",
+              display: "block",
+              fontFamily: "tajamuka",
+            }}
+          >
+            {text2}
+          </span>
+
+    
+    
+
     </div>
   );
-}
+};

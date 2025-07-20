@@ -47,6 +47,29 @@ body {
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: 'tajamuka';  /* Name of your custom font */
+  src: url('/fonts/Tajamuka Script.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'blzee';  /* Name of your custom font */
+  src: url('/fonts/blzee.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'berryrotunda';  /* Name of your custom font */
+  src: url('/fonts/Berry Rotunda.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .custom_cursor {
   cursor: url('/assets/target-scope.svg') 12 12, auto;
 }
