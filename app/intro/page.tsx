@@ -1,6 +1,8 @@
 // app/tracks/intro/page.tsx
 "use client"; // Mark this as a client-side component if you use hooks like useParams
 import styles from '../../styles/Basic_page.module.css'; // Import CSS Module
+import photopage from '../../styles/photo_page.module.css';
+
 
 const text = `I love you and I’m made of you
       And you are made of me
@@ -35,6 +37,11 @@ export default function IntroTrackPage() {
             {line}
           </span>
         ))}
+      <img
+        src="/tracks/intro_content_001.png"
+        alt="Intro Content 001"
+        className="track-image"
+      />
     </div>
   );
 }

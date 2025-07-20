@@ -1,16 +1,33 @@
 // app/tracks/intro/page.tsx
 "use client"; // Mark this as a client-side component if you use hooks like useParams
+import styles from '../../styles/Basic_page.module.css'; // Import CSS Module
+
+
+import Fireflies from "@/components/Fireflies";
 
 export default function IntroTrackPage() {
   return (
-    <div className="track-page">
-      <h1>In Amber</h1>
-      <p>This is the page for Attack of Giant Mutant Cicada!!!!!!!</p>
-      <img
-        src="/tracks/circadia.jpg"
-        alt="Track 1: Intro"
-        className="track-image"
-      />
-    </div>
+    <>
+      <Fireflies />
+      <br></br>
+      <br></br>
+
+      <div style={{ fontFamily: "blzee", color: "#fdfff6", fontSize: "3rem", width: "200px", marginLeft: "50px" }}>
+        There is a light i know.
+        Somewhere there's a light, i know.
+        And i know some lights,
+        yeah they're friends of mine,
+        And i have light in me,
+        yeah it's a friend of mine,
+        I don't need to worry about the dark,
+        Or what's in front or behind,
+        Or how much time i've got until the end of mine.
+        Somewhere there's a light, i know.
+        And i know some lights,
+        yeah they're friends of mine.
+        And i have a little light in me,
+        And i have the time.
+      </div>
+    </>
   );
 }
