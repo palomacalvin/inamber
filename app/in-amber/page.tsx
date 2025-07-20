@@ -3,9 +3,6 @@
 import photopage from '../../styles/photo_page.module.css';
 
 
-import React, { useEffect } from 'react';
-
-
 
 
 const text = `Transposed

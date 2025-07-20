@@ -2,11 +2,11 @@
 "use client"; // Mark this as a client-side component if you use hooks like useParams
 import Fireflies from "@/components/Fireflies";
 
-
 export default function IntroTrackPage() {
   return (
     <>
       <Fireflies />
+      
       <br></br>
       <br></br>
 
