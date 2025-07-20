@@ -32,7 +32,7 @@ export default function IntroTrackPage() {
         <br></br>
         <br></br>
 
-        <p><img src="tracks/aogmc-pg-001.png" style={{ display: "inline-block", maxHeight: "500px" }}></img></p>
+        <p><img src="tracks/aogmc-pg-001.png" alt="Artist rendition of Great Ayuthia the Ghost" style={{ display: "inline-block", maxHeight: "500px" }}></img></p>
         <span style={{ fontSize: "1rem" }}>Artist rendition of Great Ayuthia the Ghost</span>
 
         <br></br>

@@ -1,9 +1,7 @@
 // app/tracks/intro/page.tsx
 "use client"; // Mark this as a client-side component if you use hooks like useParams
-import styles from '../../styles/Basic_page.module.css'; // Import CSS Module
-
-
 import Fireflies from "@/components/Fireflies";
+
 
 export default function IntroTrackPage() {
   return (
