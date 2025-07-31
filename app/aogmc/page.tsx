@@ -69,7 +69,9 @@ export default function IntroTrackPage() {
         lived through centuries of change, and through each new era, the Cicadids raise 
         their voices every 17 years in remembrance of Ayuthia and the common peril.`}
 
-        {/* TODO: ADD VIDEO */}
+        <br></br>
+        
+        {`TODO: ADD VIDEO HERE`}
 
         </div>
     </div>

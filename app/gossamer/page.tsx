@@ -5,7 +5,7 @@ export default function IntroTrackPage() {
   return (
     <div className="track-page">
       <h1>In Amber</h1>
-      <p>This is the page for Gossamer!!!!!!!</p>
+      <p>We must eat. We eat too. We eat just like you. **dermestids**</p>
       <img
         src="/tracks/circadia.jpg"
         alt="Track 1: Intro"

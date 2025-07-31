@@ -4,13 +4,9 @@
 export default function IntroTrackPage() {
   return (
     <div className="track-page">
-      <h1>In Amber</h1>
-      <p>This is the page for Gossamer!!!!!!!</p>
-      <img
-        src="/tracks/circadia.jpg"
-        alt="Track 1: Intro"
-        className="track-image"
-      />
+      <p>
+      I don't want you to know how much snow settled on my peaks before it even reached October
+      </p>
     </div>
   );
 }
