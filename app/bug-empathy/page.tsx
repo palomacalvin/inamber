@@ -54,7 +54,7 @@ export default function IntroTrackPage() {
 
         ))}
 
-        {/* TODO: ADD VIDEO BETWEEN TEXT BLOCKS */}
+        <p>TODO: ADD VIDEO BETWEEN TEXT BLOCKS</p>
 
         {text2.split("\n").map((line, index) => (
           <span

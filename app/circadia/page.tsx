@@ -28,7 +28,7 @@ export default function IntroTrackPage() {
       <img src="/tracks/circadia-pg-001.png">
       </img>
 
-      {/* TODO: ADD SHORT CAVALRY ANIMATION */}
+      <p>TODO: ADD CAVALRY ANIMATION HERE.</p>
 
         {text.split("\n").map((line, index) => (
           <span
