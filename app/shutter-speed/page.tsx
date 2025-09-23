@@ -1,12 +1,124 @@
 // app/tracks/intro/page.tsx
-"use client"; // Mark this as a client-side component if you use hooks like useParams
+"use client";
+
+import { useState } from "react";
+import { quizQuestions, resultTypes } from "../data/quiz_data";
+import styles from "../../styles/quiz.module.css"; // ✅ Adjusted import path if needed
 
 export default function IntroTrackPage() {
+  const [answers, setAnswers] = useState<Record<number, string>>({});
+  const [showResult, setShowResult] = useState(false);
+
+  const handleAnswer = (questionId: number, answer: string) => {
+    setAnswers((prev) => ({ ...prev, [questionId]: answer }));
+  };
+
+  const handleSubmit = () => {
+    if (Object.keys(answers).length !== quizQuestions.length) {
+      alert("Please answer all questions.");
+      return;
+    }
+    setShowResult(true);
+  };
+
+  const calculateResult = () => {
+  const counts: Record<string, number> = {};
+
+  Object.values(answers).forEach((val) => {
+    counts[val] = (counts[val] || 0) + 1;
+  });
+
+  const mostCommon = Object.entries(counts).sort((a, b) => b[1] - a[1])[0];
+
+  if (!mostCommon) return null;
+
+  const resultKey = mostCommon[0];
+  const resultData = resultTypes[resultKey as keyof typeof resultTypes];
+
+  return resultData ?? null;
+};
+
+
+
   return (
-    <div className="track-page">
-      <p>
-      I don't want you to know how much snow settled on my peaks before it even reached October
-      </p>
+    
+    <div className={styles.trackPage}>
+
+      <h1 className={styles.title}>Who are you? What are you? Where are you?</h1>
+
+      {!showResult ? (
+        <>
+          {quizQuestions.map((q) => (
+            <div key={q.id} className={styles.questionBlock}>
+              <h2 className={styles.question}>{q.question}</h2>
+              <div className={styles.options}>
+                {q.imageOptions.map((opt) => (
+                  <div
+                    key={opt.value}
+                    className={`${styles.option} ${
+                      answers[q.id] === opt.value ? styles.selected : ""
+                    }`}
+                    onClick={() => handleAnswer(q.id, opt.value)}
+                      >
+                    <img
+                      src={opt.img}
+                      alt={opt.label}
+                      className={styles.optionImage}
+                    />
+                    <p className={styles.optionLabel}>{opt.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+
+          <button className={styles.submitButton} onClick={handleSubmit}>
+            Submit
+          </button>
+        </>
+      ) : (
+        <div className={styles.result}>
+
+          {(() => {
+            const result = calculateResult();
+            if (!result) return <p>Unknown result.</p>;
+
+            return (
+              <>
+                <img
+                  src={result.img}
+                  alt="Result"
+                  className={styles.resultImage}
+                />
+                <p className={styles.result}>{result.text}</p>
+
+
+                <p className={styles.extra}>Or are you?<br /><br />
+                  Are you insect or are you human? Or are you something
+                  else entirely?
+                  <br /><br />
+                  Are you the product of all that came before and all that is to come?
+                  <br /><br />
+                  Are you separate from everything around you or are you
+                  a part of a never-ending web?
+                  <br /><br />
+                  Are you alone in your body or are you united with everything that
+                  is by the physical plane?
+                  <br /><br />
+                  Can you be captured in a single frame or
+                  are you preserved in time that is really space?
+                </p>
+
+                TODO: ADD IFRAME WITH VIDEO
+
+              </>
+
+            );
+          })()}
+
+        </div>
+      )}
+
     </div>
   );
 }

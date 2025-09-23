@@ -5,6 +5,7 @@ import { ReactNode, useState, useEffect } from "react";
 import "./globals.css"; // Global styles
 import styles from '../styles/Layout.module.css'; // Import CSS Module
 import LoadingScreen from "../components/LoadingScreen"; // Import the LoadingScreen component
+import ScrollToTop from "../components/ScrollToTop.jsx";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
@@ -24,6 +25,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className={styles.layout}>
         {loading && <LoadingScreen />} {/* Show loading screen while loading */}
+        <ScrollToTop></ScrollToTop>
         <main>{children}</main>
         <footer>
           <p>In Amber - &copy; 2025</p>

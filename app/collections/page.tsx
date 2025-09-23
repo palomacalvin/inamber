@@ -2,18 +2,20 @@
 import React, { useRef, useState, useEffect } from "react";
 
 export default function CollectionsPage() {
-  console.log("CollectionsPage rendered");
-
   const [images, setImages] = useState<string[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Fetch the image URLs from our API on mount
   useEffect(() => {
     fetch("/api/images")
       .then((res) => res.json())
-      .then(setImages)
+      .then((data) => {
+        if (Array.isArray(data)) setImages(data);
+      })
       .catch(console.error);
   }, []);
 
+  // Handle file upload
   const handleFileChange = async () => {
     const file = fileInputRef.current?.files?.[0];
     if (!file) {
@@ -21,49 +23,36 @@ export default function CollectionsPage() {
       return;
     }
 
-    console.log("Uploading file:", file.name);
-
     const formData = new FormData();
     formData.append("file", file);
 
     try {
-  const res = await fetch("/api/upload", {
-    method: "POST",
-    body: formData,
-  });
+      const res = await fetch("/api/upload", {
+        method: "POST",
+        body: formData,
+      });
 
-  const text = await res.text();
-  let data;
-  try {
-    data = JSON.parse(text);
-  } catch {
-    console.error("Failed to parse server response:", text);
-    return;
-  }
-
-  console.log("Upload response:", data);
-
-  if (data.success) {
-    const imagesRes = await fetch("/api/images");
-    const imagesData = await imagesRes.json();
-    setImages(imagesData);
-  } else {
-    console.error("Upload failed:", data.error);
-  }
-} catch (err) {
-  console.error("Upload error:", err);
-}
-  }
+      const data = await res.json();
+      if (data.success) {
+        setImages((prev) => [data.secure_url, ...prev]); // add new image to list
+      } else {
+        console.error("Upload failed:", data.error);
+      }
+    } catch (err) {
+      console.error("Upload error:", err);
+    }
+  };
 
   const openFileDialog = () => {
     fileInputRef.current?.click();
   };
 
   return (
-    <div style={{ border: "2px solid red", padding: "20px" }}>
-      <h1>Intro</h1>
+    <div style={{ backgroundImage: "linear-gradient(blue, black)" }}>
+      <h1 style={{ fontSize: "3rem", fontFamily: "Letter-Set-A", textAlign: "center" }}>Museum Arthropoda</h1>
 
-      <button type="button" onClick={openFileDialog} style={{color: "white"}}>
+      <button type="button" onClick={openFileDialog} 
+        className="basic_button">
         Upload Image
       </button>
 
@@ -71,22 +60,31 @@ export default function CollectionsPage() {
         ref={fileInputRef}
         type="file"
         name="file"
+        accept="image/*"
         style={{ display: "none" }}
         onChange={handleFileChange}
       />
 
-      <div className="image-gallery" style={{ display: "flex", flexWrap: "wrap", marginTop: "20px" }}>
+      <p style={{ textAlign: "center", fontFamily: "sans-serif"}}>By uploading, you acknowledge that your image will become part of the digital
+        Arthropod Museum. Please only upload images that are your own, or images that you have
+        permission to upload from the image's owner. 
+        Share your arthropod finds with the world and let them live on in digital memory
+        for as long as all our wires are connected.
+      </p>
+
+      <div
+        className="image-gallery"
+        style={{ display: "flexbox", flexWrap: "wrap", marginTop: "20px", justifyContent: "center" }}
+      >
         {images.map((url, i) => (
           <img
             key={i}
-            src={url}
+            src={url.replace('/upload/', '/upload/f_auto/')}
             alt={`Uploaded ${i}`}
-            style={{ maxWidth: "200px", margin: "10px" }}
+            style={{ maxWidth: "300px", maxHeight: "300px", margin: "10px", padding: "2px", borderRadius: "20px" }}
           />
         ))}
       </div>
     </div>
   );
-
 }
-

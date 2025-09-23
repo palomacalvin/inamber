@@ -1,0 +1,131 @@
+/* styles/quiz.module.css */
+
+.trackPage {
+  background: linear-gradient(rgb(0, 0, 188), lightseagreen);
+  color: rgb(237, 245, 255);
+  font-family: "tajamuka";
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: "tajamuka";
+  color: rgb(237, 245, 255);
+}
+
+.questionBlock {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.question {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: rgb(237, 245, 255);
+  font-family: "tajamuka";
+  background: linear-gradient(darkblue, rgb(0, 0, 34));
+  border-radius: 999px;
+}
+
+
+.options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.option {
+  flex: 1;
+  max-width: 200px;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: border 0.3s ease;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.option:hover {
+  border-color: blue;
+  border-width: 15px;
+}
+
+.selected {
+  border-color: blue;
+  border-width: 3px;
+}
+
+.optionImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.optionLabel {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.submitButton {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.75rem 1.5rem;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+.submitButton:hover {
+  background-color: #005bb5;
+}
+
+.result {
+  text-align: center;
+  margin-top: 3rem;
+  color: rgb(255, 234, 255);
+  font-size: 2rem;
+  padding: 30px;
+}
+
+.result:hover {
+  animation: jitter 0.3s infinite;
+  color:rgb(106, 255, 0)
+}
+
+@keyframes jitter {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(-1px, 1px); }
+  40%  { transform: translate(-1px, -1px); }
+  60%  { transform: translate(1px, 1px); }
+  80%  { transform: translate(1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
+.extra {
+  color: rgb(237, 245, 255);
+  font-family: "tajamuka";
+  background: linear-gradient(darkblue, rgb(0, 0, 34));
+  border-radius: 999px;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 4rem 4rem;
+  display: inline-block;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word; 
+  max-width: 100%; 
+  box-sizing: border-box; 
+}

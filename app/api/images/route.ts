@@ -1,88 +1,136 @@
-import { google } from "googleapis";
-import { NextResponse } from "next/server";
-import { Readable } from "stream";
-import React from "react";
+// import { google } from "googleapis";
+// import { NextResponse } from "next/server";
+// import { Readable } from "stream";
+// import React from "react";
 
-const auth = new google.auth.GoogleAuth({
-  credentials: JSON.parse(
-    Buffer.from(process.env.GOOGLE_SERVICE_ACCOUNT_KEY_BASE64!, "base64").toString("utf-8")
-  ),
-  scopes: ["https://www.googleapis.com/auth/drive"],
+// const auth = new google.auth.GoogleAuth({
+//   credentials: JSON.parse(
+//     Buffer.from(process.env.GOOGLE_SERVICE_ACCOUNT_KEY_BASE64!, "base64").toString("utf-8")
+//   ),
+//   scopes: ["https://www.googleapis.com/auth/drive"],
+// });
+
+// const drive = google.drive({ version: "v3", auth });
+// const FOLDER_ID = process.env.GOOGLE_DRIVE_FOLDER_ID;
+
+// function bufferToStream(buffer: Buffer) {
+//   const stream = new Readable();
+//   stream.push(buffer);
+//   stream.push(null);
+//   return stream;
+// }
+
+// export async function GET() {
+//   console.log("FOLDER_ID:", FOLDER_ID);
+//   console.log("SHARED_DRIVE_ID:", process.env.GOOGLE_DRIVE_SHARED_DRIVE_ID);
+
+//   if (!FOLDER_ID) {
+//     console.error("Missing FOLDER_ID");
+//     return NextResponse.json({ error: "Missing folder ID" }, { status: 500 });
+//   }
+
+//   try {
+//     const res = await drive.files.list({
+//       q: `'${FOLDER_ID}' in parents and mimeType contains 'image/' and trashed = false`,
+//       fields: "files(id, name)",
+//       includeItemsFromAllDrives: true,
+//       supportsAllDrives: true,
+//       corpora: "drive",
+//       driveId: process.env.GOOGLE_DRIVE_SHARED_DRIVE_ID, // Make sure this is set!
+//     });
+
+//     const files = res.data.files ?? [];
+//     console.log("Fetched files:", files);
+
+//     const imageUrls = files.map((file) => 
+//       `https://drive.google.com/uc?export=view&id=${file.id}`
+//     );
+
+//     return NextResponse.json(imageUrls);
+//   } catch (error) {
+//     console.error("Drive API error:", error);
+//     return NextResponse.json({ error: "Failed to fetch images" }, { status: 500 });
+//   }
+// }
+
+
+
+// export async function POST(req: Request) {
+//   if (!FOLDER_ID) {
+//     return NextResponse.json({ error: "Missing folder ID" }, { status: 500 });
+//   }
+
+//   const contentType = req.headers.get("content-type") || "";
+//   // if (!contentType.includes("multipart/form-data")) {
+//   //   return NextResponse.json({ error: "Invalid content type" }, { status: 400 });
+//   // }
+
+//   console.log("Content-Type header:", req.headers.get("content-type"));
+
+
+//   try {
+//     const formData = await req.formData();
+//     const file = formData.get("file") as File;
+
+//     if (!file) {
+//       return NextResponse.json({ error: "No file uploaded" }, { status: 400 });
+//     }
+
+//     const buffer = Buffer.from(await file.arrayBuffer());
+//     const stream = bufferToStream(buffer);
+
+//     const uploadRes = await drive.files.create({
+//       requestBody: {
+//         name: file.name,
+//         parents: [FOLDER_ID],
+//       },
+//       media: {
+//         mimeType: file.type,
+//         body: stream,
+//       },
+//       fields: "id",
+//     });
+
+//     console.log("Upload success:", uploadRes.data.id);
+
+//     return NextResponse.json({ success: true, fileId: uploadRes.data.id });
+//   } catch (error) {
+//     console.error("Upload error:", error);
+//     return NextResponse.json({ error: "Upload failed" }, { status: 500 });
+//   }
+// }
+
+
+import { NextResponse } from "next/server";
+import { v2 as cloudinary } from "cloudinary";
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME!,
+  api_key: process.env.CLOUDINARY_API_KEY!,
+  api_secret: process.env.CLOUDINARY_API_SECRET!,
 });
 
-const drive = google.drive({ version: "v3", auth });
-const FOLDER_ID = process.env.GOOGLE_DRIVE_FOLDER_ID;
-
-function bufferToStream(buffer: Buffer) {
-  const stream = new Readable();
-  stream.push(buffer);
-  stream.push(null);
-  return stream;
-}
-
 export async function GET() {
-  if (!FOLDER_ID) {
-    return NextResponse.json({ error: "Missing folder ID" }, { status: 500 });
-  }
-
   try {
-    const res = await drive.files.list({
-      q: `'${FOLDER_ID}' in parents and mimeType contains 'image/' and trashed = false`,
-      fields: "files(id, name)",
+    // List resources (images) in your Cloudinary account
+    const result = await cloudinary.api.resources({
+      resource_type: "image",
+      max_results: 30, // adjust as needed
+      type: "upload", // default
+      prefix: "", // optional: limit by folder or prefix
     });
 
-    const imageUrls = res.data.files?.map(file => 
-      `https://drive.google.com/uc?export=view&id=${file.id}`
-    ) ?? [];
+    // Map to just secure URLs
+    type CloudinaryImage = {
+      secure_url: string;
+    };
+
+    const imageUrls = result.resources.map((file: CloudinaryImage) => file.secure_url);
+
 
     return NextResponse.json(imageUrls);
   } catch (error) {
-    console.error("Drive API error:", error);
+    console.error("Cloudinary API error:", error);
     return NextResponse.json({ error: "Failed to fetch images" }, { status: 500 });
-  }
-}
-
-export async function POST(req: Request) {
-  if (!FOLDER_ID) {
-    return NextResponse.json({ error: "Missing folder ID" }, { status: 500 });
-  }
-
-  const contentType = req.headers.get("content-type") || "";
-  // if (!contentType.includes("multipart/form-data")) {
-  //   return NextResponse.json({ error: "Invalid content type" }, { status: 400 });
-  // }
-
-  console.log("Content-Type header:", req.headers.get("content-type"));
-
-
-  try {
-    const formData = await req.formData();
-    const file = formData.get("file") as File;
-
-    if (!file) {
-      return NextResponse.json({ error: "No file uploaded" }, { status: 400 });
-    }
-
-    const buffer = Buffer.from(await file.arrayBuffer());
-    const stream = bufferToStream(buffer);
-
-    const uploadRes = await drive.files.create({
-      requestBody: {
-        name: file.name,
-        parents: [FOLDER_ID],
-      },
-      media: {
-        mimeType: file.type,
-        body: stream,
-      },
-      fields: "id",
-    });
-
-    console.log("Upload success:", uploadRes.data.id);
-
-    return NextResponse.json({ success: true, fileId: uploadRes.data.id });
-  } catch (error) {
-    console.error("Upload error:", error);
-    return NextResponse.json({ error: "Upload failed" }, { status: 500 });
   }
 }
