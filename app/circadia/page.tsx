@@ -28,7 +28,15 @@ export default function IntroTrackPage() {
       <img src="/tracks/circadia-pg-001.png">
       </img>
 
-      {/* TODO: ADD SHORT CAVALRY ANIMATION */}
+      <iframe
+          width="100%"
+          height="500"
+          src="https://www.youtube.com/watch?v=16QP0kiEKpU"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
 
         {text.split("\n").map((line, index) => (
           <span
