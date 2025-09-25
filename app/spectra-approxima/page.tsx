@@ -29,6 +29,8 @@ export default function IntroTrackPage() {
 
       <p>holding steadfast to the sky above where I melt.</p>
 
+      <p>
+
       {"\n"}
 
 
@@ -45,6 +47,7 @@ export default function IntroTrackPage() {
 
       {"\n"}
 
+      </p>
 
     </div>
   );

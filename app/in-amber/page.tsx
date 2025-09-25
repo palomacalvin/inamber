@@ -45,17 +45,17 @@ const text2 = `What makes it last?
       honey remains to be tasted?
 
       Will you remember me 
-      Will you remember me will you
-      Will you remember me 
-      Will you remember me will you
-      Will you remember me 
-      Will you remember me will you
-      Will you remember me 
-      Will you remember me will you
-      Will you remember me 
-      Will you remember me will you
-      Will you remember me 
-      Will you remember me will you
+      will you remember me will you
+      will you remember me 
+      will you remember me will you
+      will you remember me 
+      will you remember me will you
+      will you remember me 
+      will you remember me will you
+      will you remember me 
+      will you remember me will you
+      will you remember me 
+      will you remember me will you
 
       `;
 
@@ -103,7 +103,7 @@ export default function IntroTrackPage() {
 
           <span
             style={{
-              fontSize: "8rem",
+              fontSize: "1rem",
               color: "darkblue",
               display: "block",
               fontFamily: "tajamuka",
@@ -111,9 +111,6 @@ export default function IntroTrackPage() {
           >
             {text2}
           </span>
-
-    
-    
 
     </div>
   );

@@ -22,3 +22,21 @@
     font-size: 2rem;
     line-height: 2;
 }
+
+
+@keyframes shrinkText {
+  0% {
+    font-size: 6rem;
+  }
+
+  100% {
+    font-size: 1.5rem;
+  }
+}
+
+.shrinkingText {
+  display: block;
+  color: darkblue;
+  font-family: tajamuka;
+  animation: shrinkText 20s ease-out forwards;
+}
