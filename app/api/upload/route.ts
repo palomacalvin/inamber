@@ -39,6 +39,7 @@ export async function POST(req: Request) {
 
   const secureUrl = result.secure_url.replace('/upload/', '/upload/f_auto/');
 
-  return NextResponse.json({ success: true, secure_url: result.secure_url });
+  // return NextResponse.json({ success: true, secure_url: result.secure_url });
 
+  return NextResponse.json({ success: true, secure_url: secureUrl });
 }
