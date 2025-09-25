@@ -67,7 +67,7 @@ export default function CollectionsPage() {
 
       <p style={{ textAlign: "center", fontFamily: "sans-serif"}}>By uploading, you acknowledge that your image will become part of the digital
         Arthropod Museum. Please only upload images that are your own, or images that you have
-        permission to upload from the image's owner. 
+        permission to upload from the image&rsquo;s owner. 
         Share your arthropod finds with the world and let them live on in digital memory
         for as long as all our wires are connected.
       </p>

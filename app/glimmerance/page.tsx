@@ -1,8 +1,18 @@
 // app/tracks/intro/page.tsx
 "use client"; // Mark this as a client-side component if you use hooks like useParams
 import Fireflies from "@/components/Fireflies";
+import { useEffect } from "react";
 
 export default function IntroTrackPage() {
+  useEffect(() => {
+    document.body.classList.add("body-glimmerance");
+
+    return () => {
+      document.body.classList.remove("body-glimmerance");
+    };
+  }, []);
+
+
   return (
     <>
       <Fireflies />

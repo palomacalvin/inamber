@@ -1,8 +1,17 @@
- /* body {
-    background-color: #0a0a23;
- } */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.body-glimmerance {
+  background-image: url("/tracks/glimmerance-bg.png");
+  background-size: 100% 100%;
+  background-color: #0a0a23;
+  height: 3000px;
+}
  
- /* .firefly-body {
+ 
+ /* body {
   margin: 0;
   background-image: url("/tracks/glimmerance-bg.png");
   background-size: 100% 100%; 
@@ -10,15 +19,6 @@
   overflow-x: hidden;
   height: 3000px;
 } */
-
- body {
-  margin: 0;
-  background-image: url("/tracks/glimmerance-bg.png");
-  background-size: 100% 100%; 
-  background-color: #0a0a23;
-  overflow-x: hidden;
-  height: 3000px;
-}
 
 #firefly-container {
   position: fixed;
