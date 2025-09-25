@@ -6,16 +6,16 @@ export default function IntroTrackPage() {
   return (
     <div className={styles.basicpage_background_blue}>
       <p>
-        I don't want you to know how much snow settled on my peaks before it even reached October
+        I don&rsquo;t want you to know how much snow settled on my peaks before it even reached October
       </p>
 
-      <p>I don't want you to know</p>
+      <p>I don&rsquo;t want you to know</p>
 
       <p>Before the air grew bitter, and I bitter with it</p>
 
-      <p>I don't want you to know</p>
+      <p>I don&rsquo;t want you to know</p>
 
-      <p>Now all that's left are the bitters.</p>
+      <p>Now all that&rsquo;s left are the bitters.</p>
 
       <p>Tea leaves at the bottom of the cup.</p>
 

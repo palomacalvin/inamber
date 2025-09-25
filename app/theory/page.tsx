@@ -71,7 +71,7 @@ export default function TheoryPage() {
         define things, whether insects, people, or ourselves, is vitally 
         important to how the world views and treats those things, and 
         that definitions are more than just words. They can be life or 
-        death. And even more so in today's world.
+        death. And even more so in today&rsquo;s world.
         </p>
 
         <p style={{fontFamily: "sans-serif", fontSize: "1.5rem", marginBottom: "2rem" }}>
@@ -93,7 +93,7 @@ export default function TheoryPage() {
         <img src="../tracks/dermestidae_3.jpeg" alt="Dermestid" style={{ display: "flex", margin: "0 auto", maxWidth: "400px", marginTop: "1rem"}}></img>
 
         <p style={{marginTop: "1rem", fontSize: "1.5rem"}}>
-        <em>Aren't they beautiful up close?</em>
+        <em>Aren&rsquo;t they beautiful up close?</em>
         </p>
 
         <p style={{fontFamily: "sans-serif", marginTop: "3rem"}}>
