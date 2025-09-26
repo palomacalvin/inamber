@@ -25,21 +25,25 @@ function uploadBufferToCloudinary(buffer: Buffer): Promise<UploadApiResponse> {
 }
 
 export async function POST(req: Request) {
-  const formData = await req.formData();
-  const file = formData.get("file");
+  try {
+    const formData = await req.formData();
+    const file = formData.get("file");
 
-  if (!file || typeof file === "string") {
-    console.error("Invalid file:", file);
-    return NextResponse.json({ success: false, error: "No file uploaded" }, { status: 400 });
+    if (!file || typeof file === "string") {
+      console.error("Invalid file:", file);
+      return NextResponse.json({ success: false, error: "No file uploaded" }, { status: 400 });
+    }
+
+    const buffer = Buffer.from(await (file as Blob).arrayBuffer());
+
+    const result = await uploadBufferToCloudinary(buffer);
+
+    const secureUrl = result.secure_url.replace('/upload/', '/upload/f_auto/');
+
+    return NextResponse.json({ success: true, secure_url: secureUrl });
+  } catch (error) {
+    console.error("Upload failed:", error);
+    return NextResponse.json({ success: false, error: "Upload failed" }, { status: 500 });
   }
-
-  const buffer = Buffer.from(await (file as Blob).arrayBuffer());
-
-  const result = await uploadBufferToCloudinary(buffer);
-
-  const secureUrl = result.secure_url.replace('/upload/', '/upload/f_auto/');
-
-  // return NextResponse.json({ success: true, secure_url: result.secure_url });
-
-  return NextResponse.json({ success: true, secure_url: secureUrl });
 }
+
