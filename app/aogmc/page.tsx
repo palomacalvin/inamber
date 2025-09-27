@@ -71,7 +71,9 @@ export default function IntroTrackPage() {
 
         <br></br>
         
-        {`TODO: ADD VIDEO HERE`}
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <iframe width="700" height="394" src="https://www.youtube.com/embed/YMACWCf9prU?" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        </div>
 
         </div>
     </div>
