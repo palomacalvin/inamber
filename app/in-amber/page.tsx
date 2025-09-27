@@ -1,6 +1,5 @@
 // app/tracks/intro/page.tsx
 "use client"; // Mark this as a client-side component if you use hooks like useParams
-import photopage from '../../styles/photo_page.module.css';
 import styles from "../../styles/inamber_photopage.module.css"
 
 

@@ -201,7 +201,7 @@ export default function TheoryPage() {
         I also want to thank Ola Ifidon, who is also a recipient of the 
         Thompson Prize. Ola’s words of wisdom, encouragement, and 
         thoughtfulness have been deeply helpful to the project. 
-        Ola's work, 'Sankofa' was crafted with so much 
+        Ola&rsquo;s work, &rsquo;Sankofa&rsquo; was crafted with so much 
         intention and deep understanding, and it very much shows in 
         her work. It has been a pleasure to work with Ola over the 
         past year.
