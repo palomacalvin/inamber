@@ -74,14 +74,14 @@ export default function CollectionsPage() {
 
       <div
         className="image-gallery"
-        style={{ display: "flexbox", flexWrap: "wrap", marginTop: "20px", justifyContent: "center" }}
+        style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", marginTop: "20px", justifyContent: "center", gap: "16px" }}
       >
         {images.map((url, i) => (
           <img
             key={i}
             src={url.replace('/upload/', '/upload/f_auto/')}
             alt={`Uploaded ${i}`}
-            style={{ maxWidth: "300px", maxHeight: "300px", margin: "10px", padding: "2px", borderRadius: "20px" }}
+            style={{ width: "100%", height: "300px", objectFit: "cover", margin: "10px", padding: "2px", borderRadius: "20px" }}
           />
         ))}
       </div>

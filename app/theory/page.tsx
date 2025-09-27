@@ -17,8 +17,8 @@ export default function TheoryPage() {
         the value of life is often misplaced, in humans and other 
         beings alike, can be sobering. My name is Paloma Calvin and I developed
         this project for the 2024-2025 Thompson Prize facilitated by 
-        ArtsEngine at the University of Michigan for the Art/Sci residency 
-        (see here). However, my observation of the hidden world of 
+        ArtsEngine at the University of Michigan for the Art/Sci residency.
+        However, my observation of the hidden world of 
         insects began long before the project itself.</p>
 
 
@@ -201,10 +201,9 @@ export default function TheoryPage() {
         I also want to thank Ola Ifidon, who is also a recipient of the 
         Thompson Prize. Ola’s words of wisdom, encouragement, and 
         thoughtfulness have been deeply helpful to the project. 
-        I encourage you to check out Ola’s work as well, which you 
-        can find here. Ola truly crafts her works with so much 
+        Ola's work, 'Sankofa' was crafted with so much 
         intention and deep understanding, and it very much shows in 
-        her project. It has been a pleasure to work with Ola over the 
+        her work. It has been a pleasure to work with Ola over the 
         past year.
         </p>
 

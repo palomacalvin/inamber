@@ -125,8 +125,7 @@ export async function GET() {
       secure_url: string;
     };
 
-    const imageUrls = result.resources.map((file: CloudinaryImage) => file.secure_url);
-
+    const imageUrls = (result.resources || []).map((file: CloudinaryImage) => file.secure_url);
 
     return NextResponse.json(imageUrls);
   } catch (error) {

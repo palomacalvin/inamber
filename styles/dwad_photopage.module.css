@@ -1,0 +1,10 @@
+.photopage_repeat_dwad {
+    background-image: url('/tracks/stars.jpg'); /* Replace with your image path */
+    background-repeat: repeat;
+    background-size: auto;
+    cursor: url('/tracks/break.png') 12 12, auto;
+
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2;
+}

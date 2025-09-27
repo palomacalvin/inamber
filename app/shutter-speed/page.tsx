@@ -109,7 +109,18 @@ export default function IntroTrackPage() {
                   are you preserved in time that is really space?
                 </p>
 
-                TODO: ADD IFRAME WITH VIDEO
+                <div style={{ marginTop: "2rem" }}>
+                  <iframe
+                    width="100%"
+                    height="500"
+                    src="https://youtu.be/B2LAIA9tWzM"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+
+                </div>
 
               </>
 
