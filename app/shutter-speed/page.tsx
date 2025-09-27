@@ -110,7 +110,7 @@ export default function IntroTrackPage() {
                 </p>
 
                 <div style={{ marginTop: "2rem" }}>
-                  <iframe
+                  {/* <iframe
                     width="100%"
                     height="500"
                     src="https://youtu.be/B2LAIA9tWzM"
@@ -118,7 +118,11 @@ export default function IntroTrackPage() {
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                  />
+                  /> */}
+
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <iframe width="700" height="394" src="https://www.youtube.com/embed/B2LAIA9tWzM?" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
 
                 </div>
 
