@@ -53,6 +53,7 @@ export default function IntroTrackPage() {
 
       {"\n"}
 
+      <img src="tracks/glimmerance_content_001.png" alt="fireflies" style={{ paddingTop: "2rem" }}></img>
 
     </>
   );

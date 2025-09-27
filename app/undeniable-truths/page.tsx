@@ -32,6 +32,7 @@ export default function IntroTrackPage() {
           You'll be carried anyway.<br></br>
           The inevitable<br></br>
           It's already here. <br></br>
+          And it's a part of you. <br></br>
         </p>
 
     </div>

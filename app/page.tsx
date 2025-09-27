@@ -14,7 +14,7 @@ const tracks = [
   { src: 'spectra-approxima.png', link: '/spectra-approxima', title: 'Spectra Approxima', },
   { src: 'gossamer.png', link: '/gossamer', title: 'Gossamer', },
   { src: 'shutter-speed.png', link: '/shutter-speed', title: 'Shutter Speed', },
-  { src: 'omyx-speciosus.png', link: '/omyx-speciosus', title: 'Omyx speciosus', },
+  { src: 'omyx-speciosus_better.png', link: '/omyx-speciosus', title: 'Omyx speciosus', },
   { src: 'undeniable-truths.png', link: '/undeniable-truths', title: 'Undeniable Truths', },
   { src: 'do_we_all_dream.png', link: '/do-we-all-dream', title: 'Do We All Dream?', },
   { src: 'inamber-theory.png', link: '/theory', title: 'theory', },

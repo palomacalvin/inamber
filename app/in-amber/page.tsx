@@ -1,8 +1,7 @@
 // app/tracks/intro/page.tsx
 "use client"; // Mark this as a client-side component if you use hooks like useParams
 import photopage from '../../styles/photo_page.module.css';
-
-
+import styles from "../../styles/inamber_photopage.module.css"
 
 
 const text = `Transposed
@@ -65,7 +64,7 @@ export default function IntroTrackPage() {
   return (
 
 
-    <div className={photopage.photopage_repeat}>
+    <div className={styles.photopage_stretch_ia}>
       <div style={{ textAlign: "center"}}>
       </div>
       <img src='tracks/in-amber-pg_001.png'>
@@ -75,7 +74,7 @@ export default function IntroTrackPage() {
             key={index}
             style={{
               fontSize: index === 10 ? "8rem" : "6rem",  // Make Line 2 larger
-              color: /*index === 10 ?*/ "darkblue" /*: "black"*/,   // Make Line 2 red
+              color: /*index === 10 ?*/ "blue" /*: "black"*/,   // Make Line 2 red
               display: "block",  // Each line on a new line
               fontFamily: /*index === 10? "Letter-Set-A":*/ "tajamuka",
             }}
@@ -103,8 +102,8 @@ export default function IntroTrackPage() {
 
           <span
             style={{
-              fontSize: "1rem",
-              color: "darkblue",
+              fontSize: "2rem",
+              color: "aliceblue",
               display: "block",
               fontFamily: "tajamuka",
             }}

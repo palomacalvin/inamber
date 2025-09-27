@@ -1,6 +1,7 @@
 // app/tracks/intro/page.tsx
 "use client"; // Mark this as a client-side component if you use hooks like useParams
 import styles from '../../styles/Basic_page.module.css'; // Import CSS Module
+import photopage from "../../styles/circadia_photopage.module.css";
 
 const text = `Forward
       Forward
@@ -22,7 +23,7 @@ const text = `Forward
 
 export default function IntroTrackPage() {
   return (
-    <div className={styles.basicpage_background}>
+    <div className={photopage.photopage_repeat_circ}>
       <div style={{ textAlign: "center"}}>
       </div>
       <img src="/tracks/circadia-pg-001.png">
