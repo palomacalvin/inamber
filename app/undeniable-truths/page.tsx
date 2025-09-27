@@ -22,17 +22,17 @@ export default function IntroTrackPage() {
 
         <p>
           The undeniable.<br></br>
-          You're made of everything.<br></br>
-          You've left your mark just by concentrating and dissolving.<br></br>
+          You&rsquo;re made of everything.<br></br>
+          You&rsquo;ve left your mark just by concentrating and dissolving.<br></br>
           By expanding and contracting <br></br>
           Consuming and propagating.<br></br>
           Time will hold you.<br></br>
           It already does.<br></br>
           You can let yourself be carried --<br></br>
-          You'll be carried anyway.<br></br>
+          You&rsquo;ll be carried anyway.<br></br>
           The inevitable<br></br>
-          It's already here. <br></br>
-          And it's a part of you. <br></br>
+          It&rsquo;s already here. <br></br>
+          And it&rsquo;s a part of you. <br></br>
         </p>
 
     </div>
