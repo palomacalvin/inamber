@@ -28,7 +28,7 @@ export default function IntroTrackPage() {
       <img src="/tracks/circadia-pg-001.png">
       </img>
 
-      <iframe
+      {/* <iframe
           width="100%"
           height="500"
           src="https://www.youtube.com/watch?v=16QP0kiEKpU"
@@ -36,7 +36,11 @@ export default function IntroTrackPage() {
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-        />
+        /> */}
+
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <iframe width="700" height="394" src="https://www.youtube.com/embed/16QP0kiEKpU?" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
 
         {text.split("\n").map((line, index) => (
           <span

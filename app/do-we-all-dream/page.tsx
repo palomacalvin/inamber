@@ -25,6 +25,20 @@ export default function IntroTrackPage() {
 
       <img src="tracks/do_we_all_dream_content_002.png" alt="bedbugs" style={{ display: "flex", margin: "0 auto", paddingBottom: "3rem", maxWidth: "800px"}}></img>
 
+      {/* <iframe
+          width="100%"
+          height="500"
+          src="https://youtu.be/r_XI_ZNGn_w"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        /> */}
+
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <iframe width="700" height="394" src="https://www.youtube.com/embed/r_XI_ZNGn_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
     </div>
   );
 }
