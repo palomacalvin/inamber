@@ -29,7 +29,11 @@ export default function IntroTrackPage() {
       <img src='tracks/gossamer_img_004.png' alt="gossamer image 004"></img>
       </div>
 
-
+      <div style={{ margin: "2rem" }}>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <iframe width="700" height="394" src="https://www.youtube.com/embed/4uwIFyw-k80?" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        </div>
+      </div>
       
       </div>
     </div>

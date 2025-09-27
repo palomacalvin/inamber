@@ -1,6 +1,6 @@
 // app/tracks/intro/page.tsx
 "use client"; // Mark this as a client-side component if you use hooks like useParams
-import styles from '../../styles/Basic_page.module.css'; // Import CSS Module
+import photopage from "../../styles/bugempathy_photopage.module.css"
 
 const text = `Am I unpleasant?
         Am I useful?
@@ -36,7 +36,7 @@ i'm patient.
 
 export default function IntroTrackPage() {
   return (
-    <div className={styles.basicpage_background}>
+    <div className={photopage.photopage_stretch_bug}>
       <div style={{ textAlign: "center"}}>
       </div>
         {text.split("\n").map((line, index) => (
@@ -44,7 +44,8 @@ export default function IntroTrackPage() {
             key={index}
             style={{
               fontSize: "4rem",
-              color: [6, 9].includes(index) ? "darkblue" : "black",
+              fontWeight: "bold",
+              color: [6, 9].includes(index) ? "darkblue" : "blue",
               display: "block",  // Each line on a new line
               fontFamily: index === 9? "Letter-Set-A": "Letter-Set-B"
             }}
@@ -54,14 +55,19 @@ export default function IntroTrackPage() {
 
         ))}
 
-        <p>TODO: ADD VIDEO BETWEEN TEXT BLOCKS</p>
+        <div style={{ margin: "2rem" }}>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+              <iframe width="700" height="394" src="https://www.youtube.com/embed/yOtL3O97arU?" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          </div>
+        </div>
 
         {text2.split("\n").map((line, index) => (
           <span
             key={index}
             style={{
               fontSize: "4rem",
-              color: [6, 9].includes(index) ? "darkblue" : "black",
+              fontWeight: "bold",
+              color: [6, 9].includes(index) ? "darkblue" : "blue",
               display: "block",  // Each line on a new line
               fontFamily: index === 9? "Letter-Set-A": "Letter-Set-B"
             }}

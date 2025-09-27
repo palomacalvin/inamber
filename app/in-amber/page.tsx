@@ -105,6 +105,7 @@ export default function IntroTrackPage() {
 
           <span
             style={{
+              marginTop: "2rem",
               fontSize: "2rem",
               color: "aliceblue",
               display: "block",
